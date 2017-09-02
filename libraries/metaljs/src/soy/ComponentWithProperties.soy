@@ -1,0 +1,27 @@
+{namespace ComponentWithProperties}
+
+/**
+ *
+ */
+{template .render}
+    {@param data: [
+        boolean: bool,
+        num: number,
+        str: string,
+        arr: list<string>,
+        obj: [
+            org: string, 
+            repo: string
+        ]
+    ]}
+    <div>
+        <ce-with-properties 
+            ref="wc"
+            bool="{$data.boolean ? 'true' : 'false'}"
+            num="{$data.num}"
+            str="{$data.str}"
+            arr="{$data.arr}"
+            obj="{$data.obj}"
+        ></ce-with-properties>
+    </div>
+{/template}

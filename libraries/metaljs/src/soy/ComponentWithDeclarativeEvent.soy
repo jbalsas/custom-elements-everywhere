@@ -1,0 +1,26 @@
+{namespace ComponentWithDeclarativeEvent}
+
+/**
+ *
+ */
+{template .render}
+    {@param lowercaseHandled: bool}
+    {@param kebabHandled: bool}
+    {@param camelHandled: bool}
+    {@param capsHandled: bool}
+    {@param pascalHandled: bool}
+    <div>
+        <div id="lowercase">{$lowercaseHandled ? 'true' : 'false'}</div>
+        <div id="kebab">{$kebabHandled ? 'true' : 'false'}</div>
+        <div id="camel">{$camelHandled ? 'true' : 'false'}</div>
+        <div id="caps">{$capsHandled ? 'true' : 'false'}</div>
+        <div id="pascal">{$pascalHandled ? 'true' : 'false'}</div>
+        <ce-with-event ref="wc"
+            onlowercaseevent="handleLowercaseEvent"
+            onkebab-event="handleKebabEvent"
+            oncamelEvent="handleCamelEvent"
+            onCAPSEvent="handleCapsEvent"
+            onPascalEvent="handlePascalEvent"
+        ></ce-with-event> 
+    </div>
+{/template}

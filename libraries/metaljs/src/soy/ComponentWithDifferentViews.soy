@@ -1,0 +1,15 @@
+{namespace ComponentWithDifferentViews}
+
+/**
+ *
+ */
+{template .render}
+    {@param showWC: bool}
+    <div>
+        {if $showWC}
+            <ce-with-children ref="wc"></ce-with-children>
+        {else}
+            <div id="dummy">Dummy view</div>
+        {/if}
+    </div>
+{/template}

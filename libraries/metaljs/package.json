@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "karma start",
-    "build": "npm run test; DIST=../../docs/libraries/metaljs && mkdir -p $DIST && cp -r ./meta $DIST/meta && cp -r ./results $DIST/results"
+    "build": "metalsoy && npm run test; DIST=../../docs/libraries/metaljs && mkdir -p $DIST && cp -r ./meta $DIST/meta && cp -r ./results $DIST/results"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
@@ -19,6 +19,7 @@
     "karma-sourcemap-loader": "^0.3.7",
     "karma-structured-json-reporter": "^1.0.1",
     "karma-webpack": "^2.0.3",
+    "metal-tools-soy": "^4.2.6",
     "mocha": "^3.4.2",
     "webpack": "^2.0.0"
   },
@@ -26,6 +27,7 @@
     "@webcomponents/webcomponentsjs": "^1.0.1",
     "metal": "^2.13.2",
     "metal-component": "^2.13.2",
-    "metal-jsx": "^2.13.2"
+    "metal-jsx": "^2.13.2",
+    "metal-soy": "^2.13.2"
   }
 }

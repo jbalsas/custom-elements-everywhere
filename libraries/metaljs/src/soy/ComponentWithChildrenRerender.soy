@@ -1,0 +1,11 @@
+{namespace ComponentWithChildrenRerender}
+
+/**
+ *
+ */
+{template .render}
+    {@param count: number}
+    <div>
+        <ce-with-children ref="wc">{$count}</ce-with-children>
+    </div>
+{/template}

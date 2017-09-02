@@ -1,0 +1,12 @@
+{namespace ComponentWithImperativeEvent}
+
+/**
+ *
+ */
+{template .render}
+    {@param eventHandled: bool}
+    <div>
+        <div id="handled">{$eventHandled ? 'true' : 'false'}</div>
+        <ce-with-event ref="wc"></ce-with-event> 
+    </div>
+{/template}
